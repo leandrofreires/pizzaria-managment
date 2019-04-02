@@ -1,0 +1,54 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$mat-pizza-red: (
+  100: #c93c49,
+  200: #ff6f74,
+  300: #920022,
+  contrast: (
+    100: $light-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+  )
+);
+$mat-pizza-yellow: (
+  100: #f8c674,
+  200: #fff9a4,
+  300: #c39646,
+  contrast: (
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+  )
+);
+
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$pizzaria-primary: mat-palette($mat-pizza-red, 100, 200, 300);
+$pizzaria-accent: mat-palette($mat-pizza-yellow, 100, 200, 300);
+
+// The warn palette is optional (defaults to red).
+$pizzaria-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$pizzaria-theme: mat-light-theme($pizzaria-primary, $pizzaria-accent, $pizzaria-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($pizzaria-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

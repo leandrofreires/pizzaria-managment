@@ -1,0 +1,16 @@
+<mat-card>
+  <h1 class="mat-title">Login de Funcionarios</h1>
+  <mat-spinner diameter="30" ></mat-spinner>
+
+  <form>
+    <mat-form-field appearance="outline">
+      <input matInput type="email" placeholder="Email" >
+    </mat-form-field>
+    
+  </form>
+  <section class="forgot">
+    
+    <button mat-raised-button color="warn"><mat-icon>restore_outline</mat-icon> Recuperar</button>
+    <button mat-raised-button color="primary"  [routerLink]="[ '/auth/login' ]"><mat-icon>lock_outline</mat-icon> Entrar</button>
+  </section>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card>
+  <h1 class="mat-title">Login de Funcionarios</h1>
+  <form>
+    <mat-form-field appearance="outline">
+      <input matInput type="email" placeholder="Email" >
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput type="password" placeholder="Senha" >
+    </mat-form-field>
+    <mat-checkbox>Lembre-se de mim</mat-checkbox>
+  </form>
+  <section class="forgot">
+    <button mat-raised-button color="primary"><mat-icon>lock_outline</mat-icon> Entrar</button>
+    <button mat-button color="warn" [routerLink]="[ '/auth/forgot' ]">Esqueci a senha</button>
+  </section>
+  
+
+</mat-card>

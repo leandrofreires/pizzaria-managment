@@ -1,0 +1,57 @@
+
+
+<mat-drawer-container  autosize>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-icon-button><mat-icon>notifications_active</mat-icon></button>
+    <button mat-icon-button><mat-icon>more_vert</mat-icon></button>
+  </mat-toolbar>
+    <mat-drawer #drawer  mode="side">
+      <div style="height: 250px; background-color: #fff9a4; display: flex; align-items: center; justify-content: center">
+          <img src="../../assets/images/logo.png" alt="">
+        </div>
+      <mat-nav-list>
+          <mat-list-item routerLink="/admin">
+              <mat-icon matListIcon color="accent">dashboard</mat-icon>
+              <h1 matLine> Dashboard </h1>
+          </mat-list-item>
+        <mat-list-item routerLink="/admin/pedidos">
+            <mat-icon matListIcon color="accent">list_alt</mat-icon>
+            <h1 matLine> Pedidos </h1>
+        </mat-list-item>
+        <mat-list-item routerLink="/admin/chat">
+            <mat-icon matListIcon color="accent">chat</mat-icon>
+            <h1 matLine> Chat </h1>
+        </mat-list-item>
+        <mat-list-item  routerLink="/admin/clientes">
+            <mat-icon matListIcon color="accent">group</mat-icon>
+            <h1 matLine> Clientes </h1>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListIcon color="accent">attach_money</mat-icon>
+            <h1 matLine> Caixa </h1>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListIcon color="accent">supervised_user_circle</mat-icon>
+            <h1 matLine> Funcionarios </h1>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListIcon color="accent">shopping_cart</mat-icon>
+            <h1 matLine> Produltos </h1>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListIcon color="accent">scatter_plot</mat-icon>
+            <h1 matLine> Ingredientes </h1>
+        </mat-list-item>
+        <mat-list-item >
+            <mat-icon matListIcon color="accent">settings</mat-icon>
+            <h1 matLine> Configurações </h1>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </mat-drawer>
+  <router-outlet></router-outlet>
+  
+  </mat-drawer-container>
+  

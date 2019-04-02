@@ -1,0 +1,140 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type User @model {
+  id: ID! @isUnique
+  name: String!
+  email: String!
+  password: String!
+  dateOfBirth: DateTime
+  photo: File @relation(name: "UserOnFile")
+}
+type Client @model {
+  id: ID! @isUnique
+  name: String!
+  telephone: String
+  cellPhone: String!
+  dateOfBirth: DateTime
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  photo: File @relation(name: "ClientOnPhoto")
+  adresses: [Address!]! @relation(name: "ClientOnAdresses")
+  requests: [Request!]! @relation(name: "RequestOnClient")
+}
+type Address implements Location @model  {
+  id: ID! @isUnique
+  address: String!
+  number: Int!
+  district: String!
+  city: String!
+  state: String!
+  lat: Int
+  lng: Int
+  formattedAddress: String
+  default: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  client: Client @relation(name: "ClientOnAdresses")
+  company: Company @relation(name: "CompanyAddress")
+  motoboy: Motoboy @relation(name: "MotoboyOnAddress")
+}
+type Ingredient @model {
+  id: ID! @isUnique
+  name: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  products: [Product!]! @relation(name: "IngredientsOnProducts")
+}
+type ProductType @model {
+  id: ID! @isUnique
+  name: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  products: [Product!]! @relation(name: "ProductTypeOnProducts")
+}
+type Product @model {
+  id: ID! @isUnique
+  name: String!
+  description: String
+  price: Float
+  photo: [File!]! @relation(name: "ProductOnFiles")
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  type: ProductType! @relation(name: "ProductTypeOnProducts")
+  ingredients: [Ingredient!]! @relation(name: "IngredientsOnProducts")
+  requests: [Request!]! @relation(name: "RequestOnProducts")
+}
+type File @model {
+  id: ID! @isUnique
+  contentType: String
+  name: String
+  secret: String
+  size: Int
+  url: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  clients: Client @relation(name: "ClientOnPhoto")
+  users: User @relation(name: "UserOnFile")
+  products: Product @relation(name: "ProductOnFiles")
+
+}
+type Company @model {
+  id: ID! @isUnique
+  name: String!
+  description: String!
+  address: Address! @relation(name: "CompanyAddress")
+  telephone: String
+  cellPhone: String
+  cnpj: String
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+enum RequestType {
+  DELIVERY
+  BALCONY
+  TABLE
+}
+enum RequestStatus {
+  PREPARING
+  OUT_FOR_DELIVERY
+  DELIVERED
+}
+type Request @model {
+  id: ID! @isUnique
+  client: Client! @relation(name: "RequestOnClient")
+  products: [Product!]! @relation(name: "RequestOnProducts")
+  value: Float
+  paid: Float
+  paymentDifference: Float
+  payment: PaymentType! @relation(name: "PaymentTypeOnRequests")
+  type: RequestType!
+  status: RequestStatus!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  delivery: Delivery  @relation(name: "DeliveryOnRequest")
+}
+type PaymentType @model {
+  id: ID! @isUnique
+  name: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  requests: [Request!]! @relation(name: "PaymentTypeOnRequests")
+}
+type Delivery @model {
+  id: ID! @isUnique
+  request: Request! @relation(name: "DeliveryOnRequest")
+  value: Float
+  motoboy: Motoboy! @relation(name: "MotoboyOnDelivery")
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+type Motoboy @model {
+  id: ID !@isUnique
+  name: String!
+  cellPhone: String!
+  address: Address @relation(name: "MotoboyOnAddress")
+  status: Boolean! @defaultValue(value: false)
+  deliveries: [Delivery!]! @relation(name: "MotoboyOnDelivery")
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
