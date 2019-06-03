@@ -7,6 +7,7 @@ import { IndexModule } from './index/index.module';
 import { ProductsModule } from './products/products.module';
 import { AboutModule } from './about/about.module';
 import { NotFoundModule } from './not-found/not-found.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [PagesComponent,],
@@ -16,7 +17,8 @@ import { NotFoundModule } from './not-found/not-found.module';
     IndexModule,
     ProductsModule,
     AboutModule,
-    NotFoundModule
+    NotFoundModule,
+    SharedModule
   ]
 })
 export class PagesModule { }

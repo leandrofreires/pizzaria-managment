@@ -1,1 +1,39 @@
+<mat-toolbar>
+  <mat-toolbar-row fxLayoutAlign="center center">
+    <section fxFlex=80 fxFlex.lt-md=100>
+      <nav fxLayout="row wrap" fxLayoutAlign.xs="space-between center">
+        <a fxShow fxHide.xs href="tel:13997461611" mat-button>
+          <mat-icon>phone</mat-icon> 13 99746-1611
+        </a>
+        <a fxHide fxShow.xs href="tel:13997461611" mat-icon-button>
+          <mat-icon>phone</mat-icon>
+        </a>
+        <span fxShow fxHide.xs fxFlex='1 1 auto'></span>
+        <a href="whatsapp://send?phone=13997461611" mat-icon-button>
+          <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
+        </a>
+        <a href="https://facebook.com" mat-icon-button>
+          <mat-icon fontSet='fab' fontIcon="fa-facebook"></mat-icon>
+        </a>
+        <a href="https://instagram.com" mat-icon-button>
+          <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
+        </a>
+      </nav>
+    </section>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxLayoutAlign="center center" style="height: auto">
+    <img src="../../assets/images/logo.png" alt="">
+  </mat-toolbar-row>
+  <mat-toolbar-row fxLayoutAlign="center center">
+    <section fxFlex=80 fxFlex.lt-md=100>
+      <button fxHide fxShow.xs mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span fxFlex='1 1 auto'></span>
+      <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>
