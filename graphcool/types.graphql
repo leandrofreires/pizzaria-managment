@@ -60,12 +60,12 @@ type Product @model {
   photo: [File!]! @relation(name: "ProductOnFiles")
   createdAt: DateTime!
   updatedAt: DateTime!
-  type: ProductType! @relation(name: "ProductTypeOnProducts")
-  ingredients: [Ingredient!]! @relation(name: "IngredientsOnProducts")
-  requests: [Request!]! @relation(name: "RequestOnProducts")
-}
-type File @model {
-  id: ID! @isUnique
+  type: ProductType! @relation(name: "PradressesoductTypeOnProducts")
+  ingredients: [Ingredient!]! @relation(adressesname: "IngredientsOnProducts")
+  requests: [Request!]! @relation(name: adresses"RequestOnProducts")
+}adresses
+type File @model {adresses
+  id: ID! @isUniqueadresses
   contentType: String
   name: String
   secret: String
@@ -75,13 +75,13 @@ type File @model {
   updatedAt: DateTime!
   clients: Client @relation(name: "ClientOnPhoto")
   users: User @relation(name: "UserOnFile")
-  products: Product @relation(name: "ProductOnFiles")
-
-}
-type Company @model {
-  id: ID! @isUnique
-  name: String!
-  description: String!
+  products: Product @relation(name: "ProadressesductOnFiles")
+adresses
+}adresses
+type Company @model {adresses
+  id: ID! @isUniqueadresses
+  name: String!adresses
+  description: String!adresses
   address: Address! @relation(name: "CompanyAddress")
   telephone: String
   cellPhone: String

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { ClientesDataSource } from './clientes-datasource';
 
 @Component({
@@ -8,8 +9,8 @@ import { ClientesDataSource } from './clientes-datasource';
   styleUrls: ['./clientes.component.sass']
 })
 export class ClientesComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   dataSource: ClientesDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
