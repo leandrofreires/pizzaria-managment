@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { IndexComponent } from './index/index.component';
-import { ProductsComponent } from './products/products.component';
-import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [{
@@ -12,10 +10,13 @@ const routes: Routes = [{
   children: [
     {
       path: 'products',
-      component: ProductsComponent
+      loadChildren: () => import('./products/products.module').then(module => module.ProductsModule)
     }, {
       path: 'about',
-      component: AboutComponent
+      loadChildren: () => import('./about/about.module').then(module => module.AboutModule)
+    }, {
+      path: 'contact',
+      loadChildren: () => import('./contact/contact.module').then(module => module.ContactModule)
     }, {
       path: '',
       component: IndexComponent

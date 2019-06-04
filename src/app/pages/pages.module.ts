@@ -8,6 +8,7 @@ import { ProductsModule } from './products/products.module';
 import { AboutModule } from './about/about.module';
 import { NotFoundModule } from './not-found/not-found.module';
 import { SharedModule } from '../shared/shared.module';
+import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   declarations: [PagesComponent,],
@@ -15,8 +16,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     PagesRoutingModule,
     IndexModule,
-    ProductsModule,
-    AboutModule,
     NotFoundModule,
     SharedModule
   ]

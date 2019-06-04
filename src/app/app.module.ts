@@ -21,8 +21,6 @@ import { AdminModule } from './admin/admin.module';
     GraphQLModule,
     HttpClientModule,
     SharedModule,
-    AuthModule,
-    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

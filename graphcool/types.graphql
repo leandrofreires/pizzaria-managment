@@ -21,7 +21,7 @@ type Client @model {
   adresses: [Address!]! @relation(name: "ClientOnAdresses")
   requests: [Request!]! @relation(name: "RequestOnClient")
 }
-type Address implements Location @model  {
+type Address @model  {
   id: ID! @isUnique
   address: String!
   number: Int!
@@ -63,8 +63,8 @@ type Product @model {
   type: ProductType! @relation(name: "PradressesoductTypeOnProducts")
   ingredients: [Ingredient!]! @relation(adressesname: "IngredientsOnProducts")
   requests: [Request!]! @relation(name: adresses"RequestOnProducts")
-}adresses
-type File @model {adresses
+}
+type File @model {
   id: ID! @isUniqueadresses
   contentType: String
   name: String
@@ -77,8 +77,8 @@ type File @model {adresses
   users: User @relation(name: "UserOnFile")
   products: Product @relation(name: "ProadressesductOnFiles")
 adresses
-}adresses
-type Company @model {adresses
+}
+type Company @model {
   id: ID! @isUniqueadresses
   name: String!adresses
   description: String!adresses

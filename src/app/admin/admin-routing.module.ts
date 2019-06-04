@@ -7,7 +7,7 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [{
-  path: 'admin',
+  path: '',
   component: AdminComponent,
   children: [{
     path: 'dashboard',
