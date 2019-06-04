@@ -1,1 +1,4 @@
-chat list
+<mat-list *ngIf="clients">
+  <mat-list-item *ngFor="let client of clients.allClients">{{client.name}}</mat-list-item>
+</mat-list>
+
