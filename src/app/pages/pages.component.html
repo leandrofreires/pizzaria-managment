@@ -31,10 +31,11 @@
                 <span>(13) <span class="fa-2x">99622-5597</span></span>
               </section>
             </section>
-            <a [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" alt=""></a>
-            <div id="fb-root"></div>
-            <div class="fb-page" data-href="https://www.facebook.com/jottapizzas/" data-tabs="" data-width="300px" data-height="150px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jottapizzas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jottapizzas/">Jotta Pizzas</a></blockquote></div>
-          
+            <section fxLayoutAlign="center center">
+                <a  [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" alt=""></a>
+            </section>
+            
+            
       </section>
       </mat-toolbar-row>
     <mat-toolbar-row fxLayoutAlign="center center" class="mat-toolbar mat-primary">
@@ -90,4 +91,9 @@
     </mat-nav-list>
   </mat-drawer>
   <router-outlet></router-outlet>
+  <footer>
+      <div id="fb-root"></div>
+      <div class="fb-page" data-href="https://www.facebook.com/jottapizzas/" data-tabs="" data-width="300px" data-height="150px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jottapizzas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jottapizzas/">Jotta Pizzas</a></blockquote></div>
+    
+  </footer>
 </mat-drawer-container>
