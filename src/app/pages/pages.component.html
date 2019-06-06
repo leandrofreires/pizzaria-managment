@@ -1,23 +1,23 @@
 <mat-drawer-container fxFill>
   <mat-toolbar color="accent" class="mat-elevation-z6" style="margin-bottom: 10px">
-    <mat-toolbar-row fxHide.xs fxLayoutAlign="center center" class="top-links">
+    <mat-toolbar-row fxHide.xs fxLayoutAlign="center center" class="top-links mat-toolbar mat-primary">
       <section fxFlex=80 fxFlex.lt-md=100>
         <nav fxLayout="row" fxLayoutAlign.xs="space-between center">
-          <a class="telefone" fxShow fxHide.xs href="tel:13997461611" mat-button>
-            <mat-icon>phone</mat-icon> 13 99746-1611
+          <a fxShow fxHide.xs href="tel:13996225597" mat-button>
+            <mat-icon>phone</mat-icon> 13 99622-5597
           </a>
-          <a class="telefone" fxHide fxShow.xs href="tel:13997461611" mat-icon-button>
+          <a fxHide fxShow.xs href="tel:13996225597" mat-icon-button>
             <mat-icon>phone</mat-icon>
           </a>
           <span fxHide.xs fxFlex='1 1 auto'></span>
-          <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
+          <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
             mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
           </a>
-          <a target="_blank" class="messenger" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
+          <a target="_blank" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-facebook-messenger"></mat-icon>
           </a>
-          <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
             mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
           </a>
@@ -44,7 +44,11 @@
         <button (click)="sidenav.toggle()" fxHide fxShow.xs mat-icon-button>
           <mat-icon>menu</mat-icon>
         </button>
-        <span class="logo-jotta" fxHide fxShow.xs>Jotta Pizzas</span>
+        <span fxHide fxShow.xs fxLayoutAlign="center center">
+            <img height="40px" src="../../assets/images/logo-jotta.png" alt="" srcset="">
+        </span>
+        <span fxHide fxShow.xs fxFlex='1 1 auto'></span>
+        <span fxHide fxShow.xs class="logo-jotta" >Jotta Pizzas</span>
         <nav class="menu" fxShow fxHide.xs fxFlex fxLayoutAlign="start center">
           <a mat-button [routerLink]="['/products']" routerLinkActive="mat-accent">produtos</a>
           <a mat-button [routerLink]="['/about']" routerLinkActive="mat-accent">nossa historia</a>
@@ -58,7 +62,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-drawer #sidenav mode="over">
-    <section class="mat-toolbar" fxLayout="row" fxLayoutAlign.xs="space-between center" style="padding: 5px">
+    <section class="mat-toolbar mat-accent" fxLayout="row" fxLayoutAlign.xs="space-between center" style="padding: 5px">
       <a class="telefone" href="tel:13997461611" mat-icon-button>
         <mat-icon>phone</mat-icon>
       </a>
@@ -79,15 +83,15 @@
 
     </section>
     <mat-nav-list>
-      <mat-list-item>
+      <mat-list-item [routerLink]="[ '/products' ]" (click)="sidenav.close()">
         <mat-icon matListIcon color="accent">shopping_cart</mat-icon>
         <h1 matLine> Produltos </h1>
       </mat-list-item>
-      <mat-list-item routerLink="/admin/pedidos">
+      <mat-list-item [routerLink]="['/about']" (click)="sidenav.close()">
         <mat-icon matListIcon fontSet="fas" fontIcon="fa-history" color="accent"></mat-icon>
         <h1 matLine> Nossa Historio </h1>
       </mat-list-item>
-      <mat-list-item routerLink="/admin/chat">
+      <mat-list-item routerLink="/contact" (click)="sidenav.close()">
         <mat-icon matListIcon color="accent" fontSet="fas" fontIcon="fa-address-card"></mat-icon>
         <h1 matLine> Contato </h1>
       </mat-list-item>
