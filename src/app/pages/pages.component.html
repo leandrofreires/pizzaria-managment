@@ -1,6 +1,6 @@
 <mat-drawer-container fxFill>
   <mat-toolbar color="accent" class="mat-elevation-z6" style="margin-bottom: 10px">
-    <mat-toolbar-row fxHide.xs fxLayoutAlign="center center" class="top-links" >
+    <mat-toolbar-row fxHide.xs fxLayoutAlign="center center" class="top-links">
       <section fxFlex=80 fxFlex.lt-md=100>
         <nav fxLayout="row" fxLayoutAlign.xs="space-between center">
           <a class="telefone" fxShow fxHide.xs href="tel:13997461611" mat-button>
@@ -10,58 +10,60 @@
             <mat-icon>phone</mat-icon>
           </a>
           <span fxHide.xs fxFlex='1 1 auto'></span>
-          <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597" mat-icon-button>
+          <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
+            mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
           </a>
           <a target="_blank" class="messenger" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-facebook-messenger"></mat-icon>
           </a>
-          <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/" mat-icon-button>
+          <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
+            mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
           </a>
         </nav>
       </section>
     </mat-toolbar-row>
-    <mat-toolbar-row fxShow fxHide.xs class="header-logo" fxLayoutAlign="center center"> 
-      <section fxFlex=80 fxLayout="row" fxFlex.lt-md=100 fxLayoutAlign="space-between center" >
-          <section class="logo-jotta" fxLayout="column" style="width: 300px; height: 150px; border: 3px solid black; text-shadow: none; border-radius: 10px; background-color: #e32e33">
-              <section style="border-bottom: 3px solid black; background-color: white; border-radius: 5px 5px 0 0; text-align: center; color: #e32e33">Entrega Gratuita</section>
-              <section fxLayout="column" fxFlex fxLayoutAlign="space-around center">
-                <span>(13) <span class="fa-2x">3426-8153</span></span>
-                <span>(13) <span class="fa-2x">99622-5597</span></span>
-              </section>
-            </section>
-            <section fxLayoutAlign="center center">
-                <a  [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" alt=""></a>
-            </section>
-            
-            
+    <mat-toolbar-row fxShow fxHide.xs class="header-logo" fxLayoutAlign="center center">
+      <section fxFlex=80 fxLayout="row" fxFlex.lt-md=100 fxLayoutAlign="space-between center">
+        <a [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" alt=""></a>
+        <section class="logo-jotta" fxLayout="column"
+          style="width: 300px; height: 150px; border: 3px solid black; text-shadow: none; border-radius: 10px; background-color: #e32e33">
+          <section
+            style="border-bottom: 3px solid black; background-color: white; border-radius: 5px 5px 0 0; text-align: center; color: #e32e33">
+            Entrega Gratuita</section>
+          <section fxLayout="column" fxFlex fxLayoutAlign="space-around center">
+            <span>(13) <span class="fa-2x">3426-8153</span></span>
+            <span>(13) <span class="fa-2x">99622-5597</span></span>
+          </section>
+        </section>
       </section>
-      </mat-toolbar-row>
+    </mat-toolbar-row>
     <mat-toolbar-row fxLayoutAlign="center center" class="mat-toolbar mat-primary">
-      <section fxFlex=80 fxFlex.lt-md=100 fxLayoutAlign="center center">
+      <section fxFlex=80 fxFlex.lt-md=100 fxLayoutAlign="start center">
         <button (click)="sidenav.toggle()" fxHide fxShow.xs mat-icon-button>
           <mat-icon>menu</mat-icon>
         </button>
         <span class="logo-jotta" fxHide fxShow.xs>Jotta Pizzas</span>
-        <nav class="menu" fxShow fxHide.xs fxFlex fxLayoutAlign="center center">
+        <nav class="menu" fxShow fxHide.xs fxFlex fxLayoutAlign="start center">
           <a mat-button [routerLink]="['/products']" routerLinkActive="mat-accent">produtos</a>
           <a mat-button [routerLink]="['/about']" routerLinkActive="mat-accent">nossa historia</a>
           <a mat-button [routerLink]="['/contact']" routerLinkActive="mat-accent">contato</a>
         </nav>
-        <span fxFlex='auto 1 1' fxFlex.xs='1 1 auto'></span>
+        <span fxFlex='1 1 auto' ></span>
         <button mat-icon-button>
           <mat-icon>shopping_cart</mat-icon>
         </button>
       </section>
     </mat-toolbar-row>
-  </mat-toolbar >
+  </mat-toolbar>
   <mat-drawer #sidenav mode="over">
     <section class="mat-toolbar" fxLayout="row" fxLayoutAlign.xs="space-between center" style="padding: 5px">
       <a class="telefone" href="tel:13997461611" mat-icon-button>
         <mat-icon>phone</mat-icon>
       </a>
-      <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597" mat-icon-button>
+      <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
+        mat-icon-button>
         <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
       </a>
       <a [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" height="100px" fxHide fxShow.xs alt=""
@@ -70,7 +72,8 @@
       <a target="_blank" class="messenger" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
         <mat-icon fontSet='fab' fontIcon="fa-facebook-messenger"></mat-icon>
       </a>
-      <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/" mat-icon-button>
+      <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
+        mat-icon-button>
         <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
       </a>
 
@@ -92,8 +95,13 @@
   </mat-drawer>
   <router-outlet></router-outlet>
   <footer>
-      <div id="fb-root"></div>
-      <div class="fb-page" data-href="https://www.facebook.com/jottapizzas/" data-tabs="" data-width="300px" data-height="150px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jottapizzas/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jottapizzas/">Jotta Pizzas</a></blockquote></div>
-    
+    <div id="fb-root"></div>
+    <div class="fb-page" data-href="https://www.facebook.com/jottapizzas/" data-tabs="" data-width="300px"
+      data-height="150px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false"
+      data-show-facepile="true">
+      <blockquote cite="https://www.facebook.com/jottapizzas/" class="fb-xfbml-parse-ignore"><a
+          href="https://www.facebook.com/jottapizzas/">Jotta Pizzas</a></blockquote>
+    </div>
+
   </footer>
 </mat-drawer-container>
