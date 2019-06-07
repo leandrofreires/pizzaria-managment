@@ -1,4 +1,40 @@
 <mat-drawer-container fxFill>
+  <mat-drawer #sidenav mode="over">
+    <section class="mat-toolbar mat-accent" fxLayout="row" fxLayoutAlign.xs="space-between center" style="padding: 5px">
+      <a class="telefone" href="tel:13997461611" mat-icon-button>
+        <mat-icon>phone</mat-icon>
+      </a>
+      <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
+        mat-icon-button>
+        <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
+      </a>
+      <a [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" height="100px" fxHide fxShow.xs alt=""
+          srcset=""> </a>
+
+      <a target="_blank" class="messenger" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
+        <mat-icon fontSet='fab' fontIcon="fa-facebook-messenger"></mat-icon>
+      </a>
+      <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
+        mat-icon-button>
+        <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
+      </a>
+
+    </section>
+    <mat-nav-list>
+      <mat-list-item [routerLink]="[ '/products' ]" (click)="sidenav.close()">
+        <mat-icon matListIcon color="accent">shopping_cart</mat-icon>
+        <h1 matLine> Produltos </h1>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/about']" (click)="sidenav.close()">
+        <mat-icon matListIcon fontSet="fas" fontIcon="fa-history" color="accent"></mat-icon>
+        <h1 matLine> Nossa Historio </h1>
+      </mat-list-item>
+      <mat-list-item routerLink="/contact" (click)="sidenav.close()">
+        <mat-icon matListIcon color="accent" fontSet="fas" fontIcon="fa-address-card"></mat-icon>
+        <h1 matLine> Contato </h1>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
   <mat-toolbar color="accent" class="mat-elevation-z6" style="margin-bottom: 10px">
     <mat-toolbar-row fxHide.xs fxLayoutAlign="center center" class="top-links mat-toolbar mat-primary">
       <section fxFlex=80 fxFlex.lt-md=100>
@@ -10,6 +46,7 @@
             <mat-icon>phone</mat-icon>
           </a>
           <span fxHide.xs fxFlex='1 1 auto'></span>
+          <a mat-button routerLink='/auth' fxLayoutAlign='center center'>Meus Pedidos</a>
           <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
             mat-icon-button>
             <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
@@ -61,51 +98,13 @@
       </section>
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-drawer #sidenav mode="over">
-    <section class="mat-toolbar mat-accent" fxLayout="row" fxLayoutAlign.xs="space-between center" style="padding: 5px">
-      <a class="telefone" href="tel:13997461611" mat-icon-button>
-        <mat-icon>phone</mat-icon>
-      </a>
-      <a target="_blank" class="whatsapp" rel="noreferrer" href="https://api.whatsapp.com/send?phone=5513996225597"
-        mat-icon-button>
-        <mat-icon fontSet='fab' fontIcon="fa-whatsapp"></mat-icon>
-      </a>
-      <a [routerLink]="[ '/' ]"> <img src="../../assets/images/logo-jotta.png" height="100px" fxHide fxShow.xs alt=""
-          srcset=""> </a>
-
-      <a target="_blank" class="messenger" rel="noreferrer" href="https:m.me/jottapizzas" mat-icon-button>
-        <mat-icon fontSet='fab' fontIcon="fa-facebook-messenger"></mat-icon>
-      </a>
-      <a target="_blank" class="instagram" rel="noreferrer" href="https://www.instagram.com/jottapizzas_/"
-        mat-icon-button>
-        <mat-icon fontSet='fab' fontIcon="fa-instagram"></mat-icon>
-      </a>
-
-    </section>
-    <mat-nav-list>
-      <mat-list-item [routerLink]="[ '/products' ]" (click)="sidenav.close()">
-        <mat-icon matListIcon color="accent">shopping_cart</mat-icon>
-        <h1 matLine> Produltos </h1>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/about']" (click)="sidenav.close()">
-        <mat-icon matListIcon fontSet="fas" fontIcon="fa-history" color="accent"></mat-icon>
-        <h1 matLine> Nossa Historio </h1>
-      </mat-list-item>
-      <mat-list-item routerLink="/contact" (click)="sidenav.close()">
-        <mat-icon matListIcon color="accent" fontSet="fas" fontIcon="fa-address-card"></mat-icon>
-        <h1 matLine> Contato </h1>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-drawer>
   <router-outlet></router-outlet>
-  <footer>
-    <div id="fb-root"></div>
-    <div class="fb-page" data-href="https://www.facebook.com/jottapizzas/" data-tabs="" data-width="300px"
-      data-height="150px" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false"
-      data-show-facepile="true">
-      <blockquote cite="https://www.facebook.com/jottapizzas/" class="fb-xfbml-parse-ignore"><a
-          href="https://www.facebook.com/jottapizzas/">Jotta Pizzas</a></blockquote>
-    </div>
-
+  <footer fxLayout='row' class='mat-toolbar mat-primary'>
+    <section fxFlex=80 fxFlexOffset=10 fxLayoutAlign='space-between center'>
+      <section fxFlex fxLayoutAlign='center'>1</section>
+      <section fxFlex>2</section>
+      <section fxFlex>3</section>
+    </section>
+    
   </footer>
 </mat-drawer-container>
