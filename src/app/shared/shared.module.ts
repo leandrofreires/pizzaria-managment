@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [],
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatRippleModule,
     MatGridListModule,
-    MatMenuModule
+    MatTooltipModule,
+    MatMenuModule,
   ]
 })
 export class SharedModule { }
