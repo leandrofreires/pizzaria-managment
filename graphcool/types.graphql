@@ -4,7 +4,7 @@
 type User @model {
   id: ID! @isUnique
   name: String!
-  email: String!
+  email: String! @isUnique
   password: String!
   dateOfBirth: DateTime
   photo: File @relation(name: "UserOnFile")

@@ -16,13 +16,12 @@ interface EventData {
 const SALT_ROUNDS = 10;
 
 export default async (event: FunctionEvent<EventData>) => {
-  console.log(event);
-
   try {
     const graphcool = fromEvent(event);
     const api = graphcool.api('simple/v1');
 
     const { name, email, password } = event.data;
+    console.log(event.data);
 
     if (!validator.isEmail(email)) {
       return { error: 'Not a valid email' };
@@ -34,11 +33,12 @@ export default async (event: FunctionEvent<EventData>) => {
     if (userExists) {
       return { error: 'Email already in use' };
     }
+    console.log(userExists);
 
     // create password hash
     const salt = bcrypt.genSaltSync(SALT_ROUNDS);
     const hash = await bcrypt.hash(password, salt);
-
+    console.log(`salt é: ${salt},  e o hash é: ${hash}`);
     // create new user
     const userId = await createGraphcoolUser(api, name, email, hash);
 
