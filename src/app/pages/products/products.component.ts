@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.sass']
 })
 export class ProductsComponent implements OnInit {
-
-  constructor() { }
+  pizzas: number[];
+  inicio = 1;
+  constructor() {
+    this.pizzas  = Array(25).fill(1).map((x, i) => i);
+    console.log(this.pizzas);
+   }
 
   ngOnInit() {
   }

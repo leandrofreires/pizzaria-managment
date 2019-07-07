@@ -1,420 +1,52 @@
-<section fxLayout="row wrap" >
+<section fxLayout="row wrap">
     <section fxFlex=100% class="picture-page mat-elevation-z6" fxLayoutAlign="center center">
         <h1 class="fa-6x">Pizzas</h1>
     </section>
-<section fxLayout="column" fxFlex.gt-sm=90 fxFlexOffset.gt-sm=5>
 
-    <section fxLayout="row wrap">
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
+    <section fxLayout="column" fxFlex.gt-sm=90 fxFlexOffset.gt-sm=5>
 
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
+        <section fxLayout="row wrap">
 
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
+            <mat-card fxFlex fxFlex.gt-lg="0 5 calc(20%-10px)" fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
+                fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100 *ngFor="let item of pizzas;">
+                <img mat-card-image src="../../../assets/images/pizzas/{{item+1}}.jpg" alt="">
+                <mat-card-header class="mat-card-header-product">
 
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
+                    <mat-card-title>Veneza Bonilho</mat-card-title>
 
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
+                    <mat-card-subtitle>
+                        <section fxLayout="row"  fxLayoutAlign="start center">
+                            <mat-icon class="ratting">star</mat-icon>
+                            <mat-icon class="ratting">star</mat-icon>
+                            <mat-icon class="ratting">star</mat-icon>
+                            <mat-icon class="ratting">star</mat-icon>
+                            <mat-icon class="ratting">star</mat-icon>
+                            <span> &nbsp; 5 (100)</span>
+                        </section>
+                        <h3>R$ 55,00</h3>
+                    </mat-card-subtitle>
+                    
+                </mat-card-header>
 
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
+                <mat-card-content>
+                    <h4>Ingredients</h4>
+                    Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
+                </mat-card-content>
 
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
+                <mat-card-actions class="mat-card-actions-product" fxLayoutAlign="space-between center">
+                    <button mat-icon-button color='primary' matTooltip="Adicionar ao Carrinho">
+                        <mat-icon>add_shopping_cart</mat-icon>
+                    </button>
+                    <span fxFlex='1 1 auto'></span>
+                    <button mat-icon-button color='primary' matTooltip='Adiocionar aos favoritos'>
+                        <mat-icon>favorite_border</mat-icon>
+                    </button>
+                    <button mat-icon-button color='primary' matTooltip='Compartilhar'>
+                        <mat-icon>share</mat-icon>
+                    </button>
 
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
-        <mat-card fxFlex fxFlex.gt-md="0 4 calc(25%-10px)" fxFlex.lt-md='0 2 calc(50%-10px)'
-            fxFlex.lt-lg='0 3 calc(33%-10px)' fxFlex.lt-sm=100>
-
-            <img mat-card-image src="../../../assets/images/pizzas/portuguesa-com-brocolis.jpg" alt="">
-            <mat-card-header>
-                <mat-card-title>Veneza Bonilho</mat-card-title>
-                <mat-card-subtitle>
-                    <section fxLayout="row" fxLayoutAlign="start center">
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <mat-icon class="ratting">star</mat-icon>
-                        <span> &nbsp; 5 (100)</span>
-                    </section>
-                    <span>R$ 33,00</span>
-
-                </mat-card-subtitle>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Ver avaliações'>
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-            </mat-card-header>
-            <mat-card-content style="padding: 10px">
-                <h4>Ingredients</h4>
-                Mussarela, Brocolis, Palmito, Cebola, Ovo, Bacon, Provolone e Parmessão
-            </mat-card-content>
-
-            <mat-card-actions fxLayoutAlign="space-between center">
-                <button mat-button color='primary' matTooltip="Adicionar ao Carrinho">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-                <span fxFlex='1 1 auto'></span>
-                <button mat-icon-button matTooltip='Adiocionar aos favoritos'>
-                    <mat-icon color='primary'>favorite</mat-icon>
-                </button>
-                <button mat-icon-button matTooltip='Compartilhar'>
-                    <mat-icon>share</mat-icon>
-                </button>
-            </mat-card-actions>
-        </mat-card>
+                </mat-card-actions>
+            </mat-card>
+        </section>
     </section>
-</section>
 </section>
